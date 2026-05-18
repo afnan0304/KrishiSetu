@@ -1,7 +1,7 @@
 services:
   - type: web
     name: KrishiSetu-server
-    env: node
+    runtime: node
     plan: free
     buildCommand: |
       cd server
