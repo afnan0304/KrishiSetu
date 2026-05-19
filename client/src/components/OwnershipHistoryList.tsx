@@ -6,6 +6,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { Shield, User, Calendar, ArrowUpRight } from 'lucide-react';
 import { format } from 'date-fns';
 import EmptyState from './ui/EmptyState';
+import CopyableText from "./ui/CopyableText";
 
 interface ProductOwner {
   _id: string;
@@ -136,9 +137,9 @@ export function OwnershipHistoryList({ productId }: OwnershipHistoryListProps) {
                 </div>
               </div>
               <div className="text-right">
-                <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
-                  Block #{owner.blockNumber}
-                </Badge>
+              <div className="mt-1">
+                <CopyableText text={`Block #${owner.blockNumber}`} />
+              </div>
               </div>
             </div>
             

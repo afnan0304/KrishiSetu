@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { User, Calendar, Package, DollarSign, MapPin, Eye } from "lucide-react";
 import { PaymentProofModal } from "./PaymentProofModal";
 import EmptyState from "./ui/EmptyState";
+import CopyableText from "./ui/CopyableText";
 
 interface RegistrationEvent {
   id: string;
@@ -166,6 +167,9 @@ export function ProductHistory({ productId }: ProductHistoryProps) {
                 
                 return (
                   <li key={event.id} className="flex items-start gap-3">
+                    <div className="mb-2">
+                    <CopyableText text={event.id} />
+                  </div>
                     <div className="flex-shrink-0">
                       <User className="w-4 h-4 text-accent mt-1" />
                     </div>
