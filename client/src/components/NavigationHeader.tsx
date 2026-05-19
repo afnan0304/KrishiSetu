@@ -418,15 +418,8 @@ export function NavigationHeader() {
       <nav className="bg-card border-b border-border sticky top-0 z-50 shadow-sm w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-between items-center h-16 gap-2">
-            {/* Left: Logo + nav links */}
+            {/* nav links */}
             <div className="flex flex-wrap items-center gap-4 flex-grow min-w-0">
-              <button
-                  onClick={() =>
-                      setTheme(theme === "dark" ? "light" : "dark")
-                        }
->
-                        {theme === "dark" ? "☀️" : "🌙"}
-                  </button>
               <div className="flex-shrink-0">
                 <h1
                   className="text-2xl font-bold text-primary flex items-center gap-2 cursor-pointer hover:opacity-80"
